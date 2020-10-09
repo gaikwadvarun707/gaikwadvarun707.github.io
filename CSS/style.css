@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Rambla|Staatliches&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-border: #ffffff34;
+    --font-staat: 'Staatliches', cursive;
+    --font-os:  'Oswald', sans-serif;
+    --font-ram: 'Rambla', sans-serif;
+}
+
+/* global classes */
+.font-staat{
+    font: normal 400 18px var(--font-staat);
+}
+.font-os{
+    font: normal 300 18px var(--font-os);
+}
+.font-ram{
+    font: normal bold 18px var(--font-ram);
+}
+
+.font-size-40{
+    font-size: 40px;
+}
+.font-size-34{
+    font-size: 34px;
+}
+.font-size-27{
+    font-size: 27px;
+}
+.font-size-20{
+    font-size: 20px;
+}
+.font-size-16{
+    font-size: 16px;
+}
+
+.bgcolor-black{
+    background-color: var(--color-black);
+}
+
+/* #global classes */
+
+#header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index:1;
+    transition: left .5s ease;
+}
+
+#header nav{
+    height: 100vh;
+}
+#header .site-title .navbar-brand{
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+#header .nav-link{
+    margin: .7rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    text-transform: uppercase;
+}
+
+#header .nav-link:hover{
+    color: var(--color-white) !important;
+}
+
+#header .toggle-button{
+    background: none;
+    color: var(--color-black);
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    border: 1px solid var(--color-border);
+}
+
+.toggle-left{
+    left: 0 !important;
+    width: 1000px !important;
+}
+
+/* site-main */
+
+.site-banner .banner-area{
+    background: url(../assets/Banner_image.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.site-banner .banner-area .author{
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.site-banner .banner-area .author .author-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    background: url(../assets/about.jpg) no-repeat;
+    background-size: 200%;
+    background-position: 40% 0;
+}
+
+.skill .bars p, .site-content .skill .bars span{
+    line-height: 10px;
+}
+
+#footer form .row .col input[type="text"],
+#footer form .row .col input[type="email"],
+#footer form textarea{
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+    padding: 1.5rem 1rem;
+}
+/* skill-set */
+.skill{
+    padding: 1rem 10rem;
+    margin-bottom: 4rem;
+}
+.skill .first-row .col-lg-4{
+    display: flex;
+    justify-content: center;
+}
+.skill .first-row .col-lg-4 > .single-brand{
+    border: 1px solid rgb(218, 210, 210);
+    border-radius: 14px;
+    text-align: center;
+    padding: 1.8rem 0rem;
+    margin: .9rem 0;
+    width: 180px;
+    height: 100px;
+    cursor: pointer;
+    transition: transform .3s ease-in-out;
+}
+.skill .first-row .col-lg-4 > .single-brand > img{
+    width: 50%;
+    position: relative;
+    top: -24px;
+}
+.skill .first-row .col-lg-4 > .single-brand:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transform: scale(1.1);
+}
+.skill .first-row .col-lg-4 > .single-brand:hover > img{
+    width: 50%;
+    position: relative;
+    top: -24px;
+}
+/*End skill-set*/
+/*service area*/
+.services-area{
+    padding: 7rem 2rem;
+}
+.services-area .services{
+    background: rgba(213, 232, 246, 0.973);
+    font: bolder 600 22px/30px;
+    border-radius: 14px;
+    padding: 2rem 0;
+    width: 15rem;
+    margin: 5rem -0.5rem;
+    transition: transform 0.3s ease-in-out;
+}
+.services-area .services:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transform: scale(1.1);
+}
+.services-area .font-sans{
+    font: bolder 600 30px/35px;  
+}
+/* Project Area */
+.project-area{
+    padding: 2rem 0;
+}
+.project-area .myProject{
+    border: 1px solid rgb(219, 215, 215);
+    border-radius: 14px;
+    height: 240px;
+    width: 240px;
+    margin: 2rem 0.5rem;
+    justify-content: space-between;
+}
+.project-area .myProject > img{
+    /* background-color: red;  */
+    height: 12rem;
+    width: 12rem;
+    margin:0rem 1.7rem;
+}
+
+.site-main > .project-area .myProject{
+    transition: transform 0.3s ease-in-out;
+    margin-left: 3rem;
+}
+.project-area .myProject:hover{
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
+    transform: scale(1.1);
+}
+.projectText{
+    color: black;
+}
+
+@media screen and (min-width: 768px){
+    .toggle-button{
+        display: none;
+    }
+    #header{
+        z-index:0;
+    }
+}
+
+/* #site-main */
+
